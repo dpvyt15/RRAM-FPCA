@@ -1,0 +1,28 @@
+
+
+
+Control file: Control.py. If this file is run, you can choose the instruction to be executed. You can either provide inputs for the instruction or run the top files for each instruction to dump out the output errors. 
+
+Dependent libraries: scipy, numpy, joblib, math, sys, random, cmath, time
+
+Please download all the folders before execution and maintain the folder hierarchy.
+
+Multiplication, Division, Addition, Compare - high accuracy in-memory functions, extremely resilient to device and system irregularities.
+Convolution, VMM - low-accuracy (~4% error) functions used in neural nets. Extremely resilient to device and system irregularities.
+
+Running the below scripts directly gives the output error for the different instructions for different bit-widths for different device variability:
+1. High-accuracy In-memory adder: "Adder" folder. MHAdder.py is the top file.  
+2. High-accuracy in-memory multiplier: "Multiplication" folder. Top file: "PSMult.py." 
+3. In-memory Divider: "Divider" folder. Top file: "Division.py." 
+4. High-accuracy in-memory compare: "Compare" folder. Top file: "CMP.py"
+4. Low-accuracy in-memory convolution: "ConvolutionCheck" folder. Top file: "Top.py." 
+5. Low-accuracy in-memory VMM: "VMMNew" folder. Top file: "Top.py."
+6. In-memory MNIST (5-layer): "MNIST_InMem2.py" file in "Databases" folder.
+7. In-memory CIFAR-10 (50-layer densenet): "CIFAR_InMem2.py" in "Databases" folder. 
+
+
+Three types of layouts are used for these operations:
+1. Planar staircase (PS) arrays: Used for Multiplication, division and convolution. 
+2. 8*8 Manhattan (MH) arrays: Used for additions, compare, dot-product and VMM. 
+3. 128*128 Manhattan (MH) arrays: Used for VMM, DFT, IDFT, and dot-product.
+
